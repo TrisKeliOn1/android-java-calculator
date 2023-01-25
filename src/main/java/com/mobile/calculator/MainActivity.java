@@ -22,4 +22,27 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportActionBar().hide();
     }
+
+    private void iniciarComponentes(){
+        numeroZero = findViewById(R.id.numero_zero);
+        numeroUm = findViewById(R.id.numero_um);
+        numeroDois = findViewById(R.id.numero_dois);
+        numeroTres = findViewById(R.id.numero_tres);
+        numeroQuatro = findViewById(R.id.numero_quatro);
+        numeroCinco = findViewById(R.id.numero_cinco);
+        numeroSeis = findViewById(R.id.numero_seis);
+        numeroSete = findViewById(R.id.numero_sete);
+        numeroOito = findViewById(R.id.numero_oito);
+        numeroNove = findViewById(R.id.numero_nove);
+        ponto = findViewById(R.id.ponto);
+        soma = findViewById(R.id.soma);
+        subtracao = findViewById(R.id.subtracao);
+        multiplicacao = findViewById(R.id.multiplicacao);
+        divisao = findViewById(R.id.divisao);
+        igual = findViewById(R.id.igual);
+        botao_limpar = findViewById(R.id.bt_limpar);
+        txtExpressao = findViewById(R.id.txt_expressao);
+        txtResultado = findViewById(R.id.txt_resultado);
+        backspace = findViewById(R.id.backspace);
+    }
 }
