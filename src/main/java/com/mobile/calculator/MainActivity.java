@@ -20,10 +20,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        IniciarComponentes();
         getSupportActionBar().hide();
     }
 
-    private void iniciarComponentes(){
+    private void IniciarComponentes(){
         numeroZero = findViewById(R.id.numero_zero);
         numeroUm = findViewById(R.id.numero_um);
         numeroDois = findViewById(R.id.numero_dois);
@@ -44,5 +45,21 @@ public class MainActivity extends AppCompatActivity {
         txtExpressao = findViewById(R.id.txt_expressao);
         txtResultado = findViewById(R.id.txt_resultado);
         backspace = findViewById(R.id.backspace);
+    }
+
+    public void AcrescentarUmaExpressao(String string, boolean limpar_dados){
+
+        if (txtResultado.getText().equals("")){
+            txtExpressao.setText("");
+        }
+
+        if (limpar_dados){
+            txtResultado.setText("");
+            txtExpressao.append(string);
+        }else{
+            txtExpressao.append(txtResultado.getText());
+            txtExpressao.append(string);
+            txtResultado.setText("");
+        }
     }
 }
