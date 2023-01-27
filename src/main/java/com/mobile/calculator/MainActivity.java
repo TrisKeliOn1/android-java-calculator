@@ -3,11 +3,12 @@ package com.mobile.calculator;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button numeroZero, numeroUm, numeroDois, numeroTres, numeroQuatro, numeroCinco, numeroSeis, numeroSete, numeroOito,
     numeroNove, ponto, soma, subtracao, multiplicacao, divisao, igual, botao_limpar;
@@ -60,6 +61,71 @@ public class MainActivity extends AppCompatActivity {
             txtExpressao.append(txtResultado.getText());
             txtExpressao.append(string);
             txtResultado.setText("");
+        }
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.numero_zero:
+                AcrescentarUmaExpressao("0", true);
+                break;
+
+            case R.id.numero_um:
+                AcrescentarUmaExpressao("1", true);
+                break;
+
+            case R.id.numero_dois:
+                AcrescentarUmaExpressao("2", true);
+                break;
+
+            case R.id.numero_tres:
+                AcrescentarUmaExpressao("3", true);
+                break;
+
+            case R.id.numero_quatro:
+                AcrescentarUmaExpressao("4", true);
+                break;
+
+            case R.id.numero_cinco:
+                AcrescentarUmaExpressao("5", true);
+                break;
+
+            case R.id.numero_seis:
+                AcrescentarUmaExpressao("6", true);
+                break;
+
+            case R.id.numero_sete:
+                AcrescentarUmaExpressao("7", true);
+                break;
+
+            case R.id.numero_oito:
+                AcrescentarUmaExpressao("8", true);
+                break;
+
+            case R.id.numero_nove:
+                AcrescentarUmaExpressao("9", true);
+                break;
+
+            case R.id.ponto:
+                AcrescentarUmaExpressao(".", true);
+                break;
+
+            case R.id.soma:
+                AcrescentarUmaExpressao("+", false);
+                break;
+
+            case R.id.subtracao:
+                AcrescentarUmaExpressao("-", false);
+                break;
+
+            case R.id.multiplicacao:
+                AcrescentarUmaExpressao("*", false);
+                break;
+
+            case R.id.divisao:
+                AcrescentarUmaExpressao("/", false);
+                break;
         }
     }
 }
