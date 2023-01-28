@@ -23,6 +23,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         IniciarComponentes();
         getSupportActionBar().hide();
+
+        numeroZero.setOnClickListener(this);
+        numeroUm.setOnClickListener(this);
+        numeroDois.setOnClickListener(this);
+        numeroTres.setOnClickListener(this);
+        numeroQuatro.setOnClickListener(this);
+        numeroCinco.setOnClickListener(this);
+        numeroSeis.setOnClickListener(this);
+        numeroSete.setOnClickListener(this);
+        numeroOito.setOnClickListener(this);
+        numeroNove.setOnClickListener(this);
+        ponto.setOnClickListener(this);
+        soma.setOnClickListener(this);
+        subtracao.setOnClickListener(this);
+        multiplicacao.setOnClickListener(this);
+        divisao.setOnClickListener(this);
     }
 
     private void IniciarComponentes(){
